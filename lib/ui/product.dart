@@ -105,7 +105,8 @@ class _ProductPageState extends State<ProductPage> {
         builder: (context, child) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Edit Product'),
+        backgroundColor: Color.fromARGB(255, 173, 75, 218),
+        title: Text('Edit Product',style: TextStyle(color: Colors.white)),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -114,78 +115,82 @@ class _ProductPageState extends State<ProductPage> {
             children: [
               TextField(
                 controller: _titleController,
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: InputDecoration(labelText: 'Title',labelStyle:  TextStyle(color: Colors.green,fontSize: 20.h)),
               ),
               TextField(
                 controller: _descriptionController,
-                decoration: InputDecoration(labelText: 'Description'),
+                decoration: InputDecoration(labelText: 'Description',labelStyle:  TextStyle(color: Colors.green,fontSize: 18.h)),
               ),
               TextField(
                 controller: _priceController,
-                decoration: InputDecoration(labelText: 'Price'),
+                decoration: InputDecoration(labelText: 'Price',labelStyle:  TextStyle(color: Colors.red,fontSize: 20.h)),
                 keyboardType: TextInputType.number,
               ),
               TextField(
                 controller: _discountPercentageController,
-                decoration: InputDecoration(labelText: 'Discount Percentage'),
+                decoration: InputDecoration(labelText: 'Discount Percentage',labelStyle:  TextStyle(color: Colors.green,fontSize: 20.h)),
                 keyboardType: TextInputType.number,
               ),
               TextField(
                 controller: _ratingController,
-                decoration: InputDecoration(labelText: 'Rating'),
+                decoration: InputDecoration(labelText: 'Rating',labelStyle:  TextStyle(color: Colors.blue,fontSize: 18.h)),
                 keyboardType: TextInputType.number,
               ),
               TextField(
                 controller: _stockController,
-                decoration: InputDecoration(labelText: 'Stock'),
+                decoration: InputDecoration(labelText: 'Stock',labelStyle:  TextStyle(color: Colors.red,fontSize: 18.h)),
                 keyboardType: TextInputType.number,
               ),
               TextField(
                 controller: _tagsController,
-                decoration: InputDecoration(labelText: 'Tags (comma separated)'),
+                decoration: InputDecoration(labelText: 'Tags (comma separated)',labelStyle:  TextStyle(color: Colors.green,fontSize: 18.h)),
               ),
               TextField(
                 controller: _brandController,
-                decoration: InputDecoration(labelText: 'Brand'),
+                decoration: InputDecoration(labelText: 'Brand',labelStyle:  TextStyle(color: const Color.fromARGB(255, 216, 148, 30),fontSize: 18.h)),
               ),
               TextField(
                 controller: _skuController,
-                decoration: InputDecoration(labelText: 'SKU'),
+                decoration: InputDecoration(labelText: 'SKU',labelStyle:  TextStyle(color: const Color.fromARGB(255, 216, 46, 157),fontSize: 20.h)),
               ),
               TextField(
                 controller: _weightController,
-                decoration: InputDecoration(labelText: 'Weight'),
+                decoration: InputDecoration(labelText: 'Weight',labelStyle:  TextStyle(color: const Color.fromARGB(255, 228, 139, 139),fontSize: 17.h)),
                 keyboardType: TextInputType.number,
               ),
               TextField(
                 controller: _dimensionsController,
-                decoration: InputDecoration(labelText: 'Dimensions (width,height,depth)'),
+                decoration: InputDecoration(labelText: 'Dimensions (width,height,depth)',labelStyle:  TextStyle(color: const Color.fromARGB(255, 29, 193, 187),fontSize: 17.h)),
               ),
               TextField(
                 controller: _warrantyInformationController,
-                decoration: InputDecoration(labelText: 'Warranty Information'),
+                decoration: InputDecoration(labelText: 'Warranty Information',labelStyle:  TextStyle(color: const Color.fromARGB(255, 31, 54, 228),fontSize: 18.h)),
               ),
               TextField(
                 controller: _shippingInformationController,
-                decoration: InputDecoration(labelText: 'Shipping Information'),
+                decoration: InputDecoration(labelText: 'Shipping Information',labelStyle:  TextStyle(color: const Color.fromARGB(255, 33, 99, 2),fontSize: 17.h)),
               ),
               TextField(
                 controller: _availabilityStatusController,
-                decoration: InputDecoration(labelText: 'Availability Status'),
+                decoration: InputDecoration(labelText: 'Availability Status',labelStyle:  TextStyle(color: const Color.fromARGB(255, 79, 49, 49),fontSize: 18.h)),
               ),
               TextField(
                 controller: _returnPolicyController,
-                decoration: InputDecoration(labelText: 'Return Policy'),
+                decoration: InputDecoration(labelText: 'Return Policy',labelStyle:  TextStyle(color: const Color.fromARGB(255, 91, 48, 222),fontSize: 18.h)),
               ),
               TextField(
                 controller: _minimumOrderQuantityController,
-                decoration: InputDecoration(labelText: 'Minimum Order Quantity'),
+                decoration: InputDecoration(labelText: 'Minimum Order Quantity',labelStyle:  TextStyle(color: const Color.fromARGB(255, 155, 199, 67),fontSize: 16.h)),
                 keyboardType: TextInputType.number,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  padding: EdgeInsets.symmetric(horizontal: 70, vertical: 15),
+                ),
                 onPressed: _updateProduct,
-                child: Text('Update'),
+                child: Text('Update',style: TextStyle(color: Colors.black),),
               ),
             ],
           ),
