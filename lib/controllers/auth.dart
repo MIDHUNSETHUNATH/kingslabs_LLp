@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+
 import 'package:kingslabs_task/services/logins.dart';
 import 'package:kingslabs_task/ui/homescreen.dart';
 
@@ -17,7 +17,6 @@ class LoginController extends GetxController {
   Future<void> login() async {
     isLoading.value = true;
 
-    // Input validation
     if (emailController.text.isEmpty || passwordController.text.isEmpty) {
       Get.snackbar('Error', 'username and password cannot be empty');
       isLoading.value = false;
